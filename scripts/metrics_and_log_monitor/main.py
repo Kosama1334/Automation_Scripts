@@ -57,7 +57,7 @@ def get_metrics_logs(args):
 
 
 # Main execution
-if __main__ == "__main__":
+if __name__ == "__main__":
   parser = argparse.ArgumentParser(description= "Getting metrics and requested lines from the log file")
 
   parse.add_argument("--logfile", default="sample.log", help="Log file to scan")
