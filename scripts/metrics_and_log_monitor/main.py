@@ -9,7 +9,7 @@ from datetime import datetime
 #function to get the metrics of the server/system
 def get_system_metrics():
   return {
-    "CPU": psutil.cpu_percent(interval),
+    "CPU": psutil.cpu_percent(interval=1),
     "MEM": psutil.virtual_memory().percent,
     "DISK_USAGE": psutil.disk_usage('/').percent
   }
