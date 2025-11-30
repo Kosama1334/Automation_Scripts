@@ -22,10 +22,10 @@ def get_logs(log_file, searchwords):
         for p in searchwords:
           if re.search(p, line, re.IGNORECASE):
             print(f"Found a line with '{p}': {line.strip()}")
-            #log_line = (f"Found a line with '{p}': {line.strip()}")
-            #with open("output_logs.txt", "a") as k:
-            #  k.write(log_line + "\n")
-            return True
+            log_line = (f"Found a line with '{p}': {line.strip()}")
+            with open("output_logs.txt", "a") as k:
+              k.write(log_line + "\n")
+  
   except FileNotFoundError:
     print(f"Log file '{log_file}' NOT FOUND")
   return False
