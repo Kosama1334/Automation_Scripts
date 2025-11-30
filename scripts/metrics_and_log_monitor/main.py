@@ -22,9 +22,9 @@ def get_logs(log_file, searchwords):
         for p in searchwords:
           if re.search(p, line, re.IGNORECASE):
             print(f"Found a line with '{p}': {line.strip()}")
-            log_line = (f"Found a line with '{p}': {line.strip()}")
-            with open("output_logs.txt", "a") as k:
-              k.write(log_line + "\n")
+            #log_line = (f"Found a line with '{p}': {line.strip()}")
+            #with open("output_logs.txt", "a") as k:
+            #  k.write(log_line + "\n")
             return True
   except FileNotFoundError:
     print(f"Log file '{log_file}' NOT FOUND")
@@ -39,6 +39,8 @@ def write_to_file(msg):
 def get_metrics_logs(args):
   searchwords = args.searchwords.split(",")
   log_file = args.logfile
+
+  print(searchwords)
 
   while True:
     metrics = get_system_metrics()
