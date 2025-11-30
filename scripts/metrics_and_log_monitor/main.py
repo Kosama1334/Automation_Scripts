@@ -15,7 +15,7 @@ def get_system_metrics():
   }
 
 #function to scan the log file and look for lines with certain error keywords
-def get_logs(log_fie, searchwords):
+def get_logs(log_file, searchwords):
   try:
     with open(log_file, "r") as f:
       for line in f:
