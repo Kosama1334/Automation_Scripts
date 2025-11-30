@@ -62,7 +62,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser(description= "Getting metrics and requested lines from the log file")
 
   parser.add_argument("--logfile", default="sample.log", help="Log file to scan")
-  parser.add_argument("--searchwords", default="ERROR, TimeOut, WARNING", help="keywords to look for in the log file")
+  parser.add_argument("--searchwords", default="ERROR,TimeOut,WARNING", help="keywords to look for in the log file")
   parser.add_argument("--interval", type=int, default=2, help="time interval to scan metrics")
   parser.add_argument("--save", action="store_true", help="Save metrics to an output file")
 
