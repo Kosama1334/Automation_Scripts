@@ -1,0 +1,5 @@
+pip install psutil
+
+# Pip might not work on WSL, so use this instead
+sudo apt install python3-psutil
+sudo apt install python3-re
