@@ -25,7 +25,7 @@ def get_instance_state(instance_id):
 #function to start a stopped instance
 def start_stopped_instance(instance_id):
   state = get_instance_state(instance_id)
-  if state == "Running":
+  if state == "running":
     print(f"Instance with ID: {instance_id} already running\n")
     return
 
@@ -34,7 +34,7 @@ def start_stopped_instance(instance_id):
 
 def stop_instance(instance_id):
   state = get_instance_state(instance_id)
-  if (state == "Stopped" or state == "Stopping"):
+  if (state == "stopped" or state == "stopping"):
     print(f"Instance with ID: {instance_id} already stopped\n")
     return
 
