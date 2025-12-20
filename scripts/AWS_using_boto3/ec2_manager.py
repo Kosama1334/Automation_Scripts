@@ -28,7 +28,7 @@ def start_stopped_instance(instance_id):
     print(f"Instance with ID: {instance_id} already running\n")
     return
 
-  ec2.start_instances(Instance_Ids=[instance_id])
+  ec2.start_instances(InstanceIds=[instance_id])
   print(f"Instance with ID: {instance_id} started!\n")
 
 def stop_instance(instance_id):
