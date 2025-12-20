@@ -26,20 +26,20 @@ def get_instance_state(instance_id):
 def start_stopped_instance(instance_id):
   state = get_instance_state(instance_id)
   if state == "running":
-    print(f"Instance with ID: {instance_id} already running\n")
+    print(f"Instance with ID: {instance_id} already running!\n######################\n###ALREADY RUNNING###\n######################\n")
     return
 
   ec2.start_instances(InstanceIds=[instance_id])
-  print(f"Instance with ID: {instance_id} started!\n")
+  print(f"Instance with ID: {instance_id} started!\n$$$$$$$$STARTED!$$$$$$$$\n")
 
 def stop_instance(instance_id):
   state = get_instance_state(instance_id)
   if (state == "stopped" or state == "stopping"):
-    print(f"Instance with ID: {instance_id} already stopped\n")
+    print(f"Instance with ID: {instance_id} already stopped!\n######################\n###ALREADY STOPPED###\n######################\n")
     return
 
   ec2.stop_instances(InstanceIds=[instance_id])
-  print(f"Instance with ID: {instance_id} stopped!\n")
+  print(f"Instance with ID: {instance_id} stopped!\n$$$$$$$$STOPPED!$$$$$$$$\n")
 
 
 
