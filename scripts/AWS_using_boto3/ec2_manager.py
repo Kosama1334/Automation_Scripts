@@ -50,6 +50,8 @@ if __name__ == "__main__":
   parser.add_argument("--start", action="store_true")
   parser.add_argument("--stop", action="store_true")
   parser.add_argument("--id")
+
+  args = parser.parse_args()
   
   if args.list:
     listEC2Instances()
