@@ -18,8 +18,9 @@ def listEC2_Instances():
 
 #function to get instance_state
 def get_instance_state(instance_id):
-  resp = ec2.describe_instances()
-  return (resp["Reservations"][0]["Instances"][0]["State"]["Name"])
+  resp = ec2.describe_instances(InstanceIds=[instance_id])
+  state = resp["Reservations"][0]["Instances"][0]["State"]["Name"]
+  return state
 
 #function to start a stopped instance
 def start_stopped_instance(instance_id):
