@@ -1,7 +1,7 @@
 # Basic script to manage EC2 instances using CLI
 
 import boto3
-import agrparse
+import argparse
 
 ec2 = boto3.client("ec2")
 
