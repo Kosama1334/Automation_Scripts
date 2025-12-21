@@ -27,7 +27,7 @@ if __name__ == "__main__":
     parser.add_argument("--upload", action="store_true")
     parser.add_argument("--file", help="File to be uploaded")
 
-    agrs = parser.parse_args()
+    args = parser.parse_args()
 
     if args.upload:
         upload_file(args.bucket, args.file)
