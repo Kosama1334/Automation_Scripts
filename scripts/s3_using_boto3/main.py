@@ -24,7 +24,7 @@ def list_bucket_objects(bucket):
         resp = s3.list_objects_v2(Bucket=bucket)
         #count = sum(1 for _ in bucket.objects.all())           #Not really needed. Could cost for the number of calls if there are many objects
         if 'Contents' in resp:
-                for obj in resp.get('Contents', []"):
+                for obj in resp.get('Contents', []):
                         print(f"Key: {obj["Key"]}\n")
         else:
                 print(f"[ERROR] Specified bucket is empty!!!\n")
